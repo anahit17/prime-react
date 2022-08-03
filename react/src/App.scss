@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  .app-content {
+    padding: 40px;
+  }
+  .container {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  .btn-create {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  .card-edited {
+    margin: 0 auto;
+    max-width: 1000px;
+    .field,
+    .field-checkbox {
+      margin-top: 20px;
+    }
+    .field-checkbox {
+      display: flex;
+      align-items: center;
+      label {
+        margin-left: 10px;
+      }
+    }
+    .mt-2{
+      margin-top: 50px;
+    }
+  }
+  .card{
+    .field-checkbox{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      label{
+        margin-left: 10px;
+      }
+    }
+  }
+  .form-edited {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    @media screen and (max-width: 860px) {
+      grid-template-columns: repeat(1, 1fr);
+
+    }
+  }
+}
