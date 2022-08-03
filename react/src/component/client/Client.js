@@ -15,7 +15,7 @@ import axios from "axios";
 import {
   deleteClientData,
   setClients,
-  updateClient,
+  updateClient
 } from "../../store/client/action";
 
 export default function Client() {
@@ -29,7 +29,7 @@ export default function Client() {
   const [displayResponsive, setDisplayResponsive] = useState(false);
 
   const dialogFuncMap = {
-    displayResponsive: setDisplayResponsive,
+    displayResponsive: setDisplayResponsive
   };
   const onClick = (name, position) => {
     dialogFuncMap[`${name}`](true);
@@ -67,7 +67,7 @@ export default function Client() {
       severity: "info",
       summary: "Confirmed",
       detail: "You have accepted",
-      life: 3000,
+      life: 3000
     });
   };
   const reject = () => {
@@ -75,16 +75,16 @@ export default function Client() {
       severity: "warn",
       summary: "Rejected",
       detail: "You have rejected",
-      life: 3000,
+      life: 3000
     });
   };
   const confirm = () => {
     confirmDialog({
-      message: "Are you sure you want to proceed?",
+      message: "Are you sure?",
       header: "Confirmation",
       icon: "pi pi-exclamation-triangle",
       accept,
-      reject,
+      reject
     });
   };
 
@@ -130,14 +130,14 @@ export default function Client() {
     Mobile: "",
     Email: "",
     Contact: "",
-    CountryCode: "",
+    CountryCode: ""
   };
 
   const {
     control,
     formState: { errors },
     handleSubmit,
-    reset,
+    reset
   } = useForm({ defaultValues });
 
   const onSubmit = async (data) => {
@@ -239,7 +239,7 @@ export default function Client() {
                             id={field.name}
                             {...field}
                             className={classNames({
-                              "p-invalid": fieldState.invalid,
+                              "p-invalid": fieldState.invalid
                             })}
                           />
                         )}
@@ -257,7 +257,7 @@ export default function Client() {
                             id={field.name}
                             {...field}
                             className={classNames({
-                              "p-invalid": fieldState.invalid,
+                              "p-invalid": fieldState.invalid
                             })}
                           />
                         )}
@@ -276,7 +276,7 @@ export default function Client() {
                             id={field.name}
                             {...field}
                             className={classNames({
-                              "p-invalid": fieldState.invalid,
+                              "p-invalid": fieldState.invalid
                             })}
                           />
                         )}
@@ -295,7 +295,7 @@ export default function Client() {
                             id={field.name}
                             {...field}
                             className={classNames({
-                              "p-invalid": fieldState.invalid,
+                              "p-invalid": fieldState.invalid
                             })}
                           />
                         )}
@@ -314,7 +314,7 @@ export default function Client() {
                             id={field.name}
                             {...field}
                             className={classNames({
-                              "p-invalid": fieldState.invalid,
+                              "p-invalid": fieldState.invalid
                             })}
                           />
                         )}
@@ -333,7 +333,7 @@ export default function Client() {
                             id={field.name}
                             {...field}
                             className={classNames({
-                              "p-invalid": fieldState.invalid,
+                              "p-invalid": fieldState.invalid
                             })}
                           />
                         )}
@@ -352,7 +352,7 @@ export default function Client() {
                             id={field.name}
                             {...field}
                             className={classNames({
-                              "p-invalid": fieldState.invalid,
+                              "p-invalid": fieldState.invalid
                             })}
                           />
                         )}
@@ -371,7 +371,7 @@ export default function Client() {
                             id={field.name}
                             {...field}
                             className={classNames({
-                              "p-invalid": fieldState.invalid,
+                              "p-invalid": fieldState.invalid
                             })}
                           />
                         )}
@@ -390,7 +390,7 @@ export default function Client() {
                             id={field.name}
                             {...field}
                             className={classNames({
-                              "p-invalid": fieldState.invalid,
+                              "p-invalid": fieldState.invalid
                             })}
                           />
                         )}
@@ -409,7 +409,7 @@ export default function Client() {
                             id={field.name}
                             {...field}
                             className={classNames({
-                              "p-invalid": fieldState.invalid,
+                              "p-invalid": fieldState.invalid
                             })}
                           />
                         )}
@@ -428,15 +428,15 @@ export default function Client() {
                           pattern: {
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                             message:
-                              "Invalid email address. E.g. example@email.com",
-                          },
+                              "Invalid email address. E.g. example@email.com"
+                          }
                         }}
                         render={({ field, fieldState }) => (
                           <InputText
                             id={field.name}
                             {...field}
                             className={classNames({
-                              "p-invalid": fieldState.invalid,
+                              "p-invalid": fieldState.invalid
                             })}
                           />
                         )}
@@ -461,7 +461,7 @@ export default function Client() {
                             id={field.name}
                             {...field}
                             className={classNames({
-                              "p-invalid": fieldState.invalid,
+                              "p-invalid": fieldState.invalid
                             })}
                           />
                         )}
