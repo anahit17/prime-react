@@ -10,7 +10,7 @@ import axios from "axios";
 import {
   deleteStorageLocationData,
   setStorageLocation,
-  updateStorageLocation,
+  updateStorageLocation
 } from "../../store/storagelocation/action";
 import { Controller, useForm } from "react-hook-form";
 import { Dropdown } from "primereact/dropdown";
@@ -34,7 +34,7 @@ export default function StorageLocation() {
   const dispatch = useDispatch();
 
   const dialogFuncMap = {
-    displayResponsive: setDisplayResponsive,
+    displayResponsive: setDisplayResponsive
   };
   const onClick = (name, position) => {
     dialogFuncMap[`${name}`](true);
@@ -72,7 +72,7 @@ export default function StorageLocation() {
       severity: "info",
       summary: "Confirmed",
       detail: "You have accepted",
-      life: 3000,
+      life: 3000
     });
   };
   const reject = () => {
@@ -80,7 +80,7 @@ export default function StorageLocation() {
       severity: "warn",
       summary: "Rejected",
       detail: "You have rejected",
-      life: 3000,
+      life: 3000
     });
   };
   const confirm = () => {
@@ -89,7 +89,7 @@ export default function StorageLocation() {
       header: "Confirmation",
       icon: "pi pi-exclamation-triangle",
       accept,
-      reject,
+      reject
     });
   };
   const deleteStorageLocation = (rowData) => {
@@ -134,14 +134,9 @@ export default function StorageLocation() {
     StorType: "",
     SeqPick: "",
     SeqDrop: "",
-    Contact: "",
+    Contact: ""
   };
-  const {
-    control,
-    formState: { errors },
-    handleSubmit,
-    reset,
-  } = useForm({ defaultValues });
+  const { control, handleSubmit, reset } = useForm({ defaultValues });
 
   const onSubmit = async (data) => {
     onHide("displayResponsive");
@@ -206,7 +201,6 @@ export default function StorageLocation() {
       });
   }, [countries]);
 
-  
   return (
     <div>
       <div className="btn-create">
@@ -241,7 +235,7 @@ export default function StorageLocation() {
                           id={field.name}
                           {...field}
                           className={classNames({
-                            "p-invalid": fieldState.invalid,
+                            "p-invalid": fieldState.invalid
                           })}
                         />
                       )}
@@ -285,7 +279,7 @@ export default function StorageLocation() {
                           id={field.name}
                           {...field}
                           className={classNames({
-                            "p-invalid": fieldState.invalid,
+                            "p-invalid": fieldState.invalid
                           })}
                         />
                       )}
@@ -308,7 +302,7 @@ export default function StorageLocation() {
                         onChange={(e) => field.onChange(e.checked)}
                         checked={field.value}
                         className={classNames({
-                          "p-invalid": fieldState.invalid,
+                          "p-invalid": fieldState.invalid
                         })}
                       />
                     )}
@@ -326,7 +320,7 @@ export default function StorageLocation() {
                         onChange={(e) => field.onChange(e.checked)}
                         checked={field.value}
                         className={classNames({
-                          "p-invalid": fieldState.invalid,
+                          "p-invalid": fieldState.invalid
                         })}
                       />
                     )}
@@ -344,7 +338,7 @@ export default function StorageLocation() {
                         onChange={(e) => field.onChange(e.checked)}
                         checked={field.value}
                         className={classNames({
-                          "p-invalid": fieldState.invalid,
+                          "p-invalid": fieldState.invalid
                         })}
                       />
                     )}
@@ -362,7 +356,7 @@ export default function StorageLocation() {
                         onChange={(e) => field.onChange(e.checked)}
                         checked={field.value}
                         className={classNames({
-                          "p-invalid": fieldState.invalid,
+                          "p-invalid": fieldState.invalid
                         })}
                       />
                     )}
@@ -380,7 +374,7 @@ export default function StorageLocation() {
                           id={field.name}
                           {...field}
                           className={classNames({
-                            "p-invalid": fieldState.invalid,
+                            "p-invalid": fieldState.invalid
                           })}
                         />
                       )}
@@ -403,7 +397,7 @@ export default function StorageLocation() {
                           id={field.name}
                           {...field}
                           className={classNames({
-                            "p-invalid": fieldState.invalid,
+                            "p-invalid": fieldState.invalid
                           })}
                         />
                       )}
@@ -426,7 +420,7 @@ export default function StorageLocation() {
                           id={field.name}
                           {...field}
                           className={classNames({
-                            "p-invalid": fieldState.invalid,
+                            "p-invalid": fieldState.invalid
                           })}
                         />
                       )}
@@ -449,7 +443,7 @@ export default function StorageLocation() {
                           id={field.name}
                           {...field}
                           className={classNames({
-                            "p-invalid": fieldState.invalid,
+                            "p-invalid": fieldState.invalid
                           })}
                         />
                       )}
